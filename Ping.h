@@ -8,7 +8,7 @@ class Ping {
     int _sig_pin;
   public:
     Ping(int);
-    long read();
+    long read(int timeout = 20000);
 };
 
 #endif

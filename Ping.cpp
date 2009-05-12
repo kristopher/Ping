@@ -5,7 +5,7 @@ Ping::Ping(int sig_pin) {
   _sig_pin = sig_pin;
 }
 
-long Ping::read() {
+long Ping::read(int timeout) {
   long duration, inches;
 
   // The PING))) is triggered by a HIGH pulse of 2 or more microseconds.
@@ -21,7 +21,7 @@ long Ping::read() {
   // pulse whose duration is the time (in microseconds) from the sending
   // of the ping to the reception of its echo off of an object.
   pinMode(_sig_pin, INPUT);
-  duration = pulseIn(_sig_pin, HIGH, 20000);
+  duration = pulseIn(_sig_pin, HIGH, timeout);
 
   // convert the time into a distance
   inches = microsecondsToInches(duration);
