@@ -1,0 +1,46 @@
+h1. Ping
+
+Parallax Ping Sensor Arduino/Wiring Library
+
+h2. Example
+
+<pre>
+<code>
+#include <Ping.h>
+#define PINGFRONT 4
+#define PINGRIGHT 5
+#define PINGLEFT 6
+
+Ping ping_front(PINGFRONT, INCHES);
+Ping ping_right(PINGRIGHT, INCHES);
+Ping ping_left(PINGLEFT, INCHES);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.print("Ping Left: ");
+  Serial.println(ping_left.read());
+  Serial.print("Ping Front: ");
+  Serial.println(ping_front.read());
+  Serial.print("Ping Right: ");
+  Serial.println(ping_right.read());
+  delay(500);
+}
+</code>
+</pre>
+
+h2. Install
+
+<pre>
+<code>
+  cd your_arduino_folder/hardware/libraries/
+  
+  git clone git://github.com/kristopher/ping.git
+</code>
+</pre>
+
+h2. Homepage
+
+"http://github.com/kristopher/ping":http://github.com/kristopher/ping
