@@ -37,7 +37,7 @@ h2. Install
 <code>
   cd your_arduino_folder/hardware/libraries/
   
-  git clone git://github.com/kristopher/ping.git
+  git clone git://github.com/kristopher/Ping.git
 </code>
 </pre>
 
